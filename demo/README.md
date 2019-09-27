@@ -7,6 +7,11 @@ A Quasar Framework app
 yarn
 ```
 
+## Setup Build Link
+
+In the `ui` folder, type `yarn link`.
+In the demo folder, type `yarn link "q-colorize-mixin"`
+
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
 quasar dev
@@ -17,9 +22,14 @@ quasar dev
 yarn run lint
 ```
 
-### Build the app for production
+### Build the app for SSR
 ```bash
-quasar build
+quasar dev -m ssr
+```
+
+### Build the app for Electron
+```bash
+quasar dev -m electron
 ```
 
 ### Customize the configuration

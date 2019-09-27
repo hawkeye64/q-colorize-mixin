@@ -5,7 +5,7 @@
         <q-icon name="bolt" />
       </q-item-section>
       <q-item-section>
-        <q-item-label>Colorize/Theme docs</q-item-label>
+        <q-item-label>QColorizeMixin docs</q-item-label>
         <q-item-label caption>Documentation</q-item-label>
       </q-item-section>
     </q-item>
@@ -14,18 +14,18 @@
         <q-icon name="bolt" />
       </q-item-section>
       <q-item-section>
-        <q-item-label>Colorize/Theme examples</q-item-label>
-        <q-item-label caption>Examples of how to use the Colorize/Theme mixins</q-item-label>
+        <q-item-label>QColorizeMixin examples</q-item-label>
+        <q-item-label caption>Examples of how to use the QColorizeMixin library</q-item-label>
       </q-item-section>
     </q-item>
     <q-separator />
-    <q-item clickable tag="a" target="_blank" href="https://github.com/hawkeye64/app-extension-colorize">
+    <q-item clickable tag="a" target="_blank" href="https://github.com/hawkeye64/q-colorize-mixin">
       <q-item-section avatar>
         <q-icon name="extension" />
       </q-item-section>
       <q-item-section>
-        <q-item-label>Colorize/Theme home</q-item-label>
-        <q-item-label caption>@quasar/colorize</q-item-label>
+        <q-item-label>QColorizeMixin home</q-item-label>
+        <q-item-label caption>q-colorize-mixin</q-item-label>
       </q-item-section>
     </q-item>
     <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qmarkdown">

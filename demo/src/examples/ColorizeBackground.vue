@@ -8,12 +8,12 @@
 
 <script>
 import Vue from 'vue'
-import Colorize from '@quasar/quasar-app-extension-colorize/src/colorize.js'
+import QColorizeMixin from 'q-colorize-mixin'
 
 const MyComponent = Vue.extend({
   name: 'my-component',
 
-  mixins: [Colorize],
+  mixins: [QColorizeMixin],
 
   props: {
     // color prop is added by colorize mix-in

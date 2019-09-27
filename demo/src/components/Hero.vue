@@ -1,8 +1,8 @@
 <template>
   <div>
     <section class="page-header">
-      <div class="text-h1 project-name">Colorize & Theme</div>
-      <div class="text-h2 project-tagline">Mixins for Vue Render Functions</div>
+      <div class="text-h1 project-name">QColorizeMixin</div>
+      <div class="text-h2 project-tagline">Mixin library for Vue Render Functions</div>
       <div class="byline">Created and maintained by Jeff Galbraith</div>
       <div class="quasar">A Quasar Framework App Extension</div>
       <q-btn type="a" href="https://github.com/hawkeye64/app-extension-colorize" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
