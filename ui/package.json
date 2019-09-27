@@ -1,0 +1,55 @@
+{
+  "name": "q-colorize-mixin",
+  "version": "1.0.0-alpha.1",
+  "author": "Jeff Galbraith <jeff@quasar.dev>",
+  "description": "Quasar color and theme mixins",
+  "license": "MIT",
+  "module": "dist/index.esm.js",
+  "main": "dist/quasar.common.js",
+  "scripts": {
+    "dev": "cd dev; yarn dev; cd ..",
+    "dev:umd": "yarn build && node build/script.open-umd.js",
+    "dev:ssr": "cd dev; yarn 'dev:ssr'; cd ..",
+    "dev:ios": "cd dev; yarn 'dev:ios'; cd ..",
+    "dev:android": "cd dev; yarn 'dev:android'; cd ..",
+    "dev:electron": "cd dev; yarn 'dev:electron'; cd ..",
+    "build": "node build/index.js",
+    "build:js": "node build/script.javascript.js",
+    "build:css": "node build/script.css.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawkeye64/q-colorize-mixin.git"
+  },
+  "bugs": "https://github.com/hawkeye64/q-colorize-mixin/issues",
+  "homepage": "https://github.com/hawkeye64/q-colorize-mixin",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "chalk": "^2.4.2",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.0.0",
+    "open": "^6.4.0",
+    "postcss": "^7.0.18",
+    "postcss-rtl": "^1.5.0",
+    "quasar": "^1.0.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.21.3",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "uglify-es": "^3.3.9",
+    "zlib": "^1.0.5"
+  },
+  "keywords": [
+    "quasar",
+    "quasar-framework",
+    "vue",
+    "mix-in",
+    "color",
+    "background-color",
+    "theme"
+  ],
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}
