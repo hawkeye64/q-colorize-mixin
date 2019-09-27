@@ -25,12 +25,6 @@ For all examples below that take an input, you can manually enter any valid colo
       <example-card title="Border with Input" name="ColorizeBorderSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackgroundSelection.vue').default)" />
       <example-card title="Text, Background and Border with Input" name="ColorizeBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBothSelection.vue').default)" />
 
-      <example-title title="Theme Basic" />
-      <example-card title="Simple Theme" name="ThemeSimple" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSimple.vue').default)" />
-
-      <example-title title="Theme Advanced" />
-      <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
-      <example-card title="Theme Quasar Components" name="ThemeQuasarComponents" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeQuasarComponents.vue').default)" />
     </div>
   </hero>
 </template>
@@ -70,11 +64,6 @@ export default {
     this.addToToc('Background with Input', 2)
     this.addToToc('Border with Input', 2)
     this.addToToc('Text, Background and Border with Input', 2)
-    this.addToToc('Theme Basic')
-    this.addToToc('Simple Theme', 2)
-    this.addToToc('Theme Advanced')
-    this.addToToc('Theme Selection', 2)
-    this.addToToc('Theme Quasar Components', 2)
 
     this.toc = this.tempToc
   },

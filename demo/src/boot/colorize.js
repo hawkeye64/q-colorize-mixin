@@ -6,9 +6,6 @@ import ColorizeColorSelection from '../examples/ColorizeColorSelection'
 import ColorizeBackgroundSelection from '../examples/ColorizeBackgroundSelection'
 import ColorizeBorderSelection from '../examples/ColorizeBorderSelection'
 import ColorizeBothSelection from '../examples/ColorizeBothSelection'
-import ThemeSimple from '../examples/ThemeSimple'
-import ThemeSelection from '../examples/ThemeSelection'
-import ThemeQuasarComponents from '../examples/ThemeQuasarComponents'
 
 export default ({ Vue }) => {
   Vue.component('ColorizeColor', ColorizeColor)
@@ -19,7 +16,4 @@ export default ({ Vue }) => {
   Vue.component('ColorizeBackgroundSelection', ColorizeBackgroundSelection)
   Vue.component('ColorizeBorderSelection', ColorizeBorderSelection)
   Vue.component('ColorizeBothSelection', ColorizeBothSelection)
-  Vue.component('ThemeSimple', ThemeSimple)
-  Vue.component('ThemeSelection', ThemeSelection)
-  Vue.component('ThemeQuasarComponents', ThemeQuasarComponents)
 }

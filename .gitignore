@@ -2,3 +2,5 @@ ui/yarn.lock
 ui/node_modules
 ui/dev/yarn.lock
 ui/dev/node_modules
+
+demo/yarn.lock

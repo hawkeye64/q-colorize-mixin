@@ -1,6 +1,8 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
+const path = require('path')
+
 module.exports = function (ctx) {
   return {
     // app boot file (/src/boot)
@@ -81,7 +83,7 @@ module.exports = function (ctx) {
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
-      publicPath: 'app-extension-colorize',
+      publicPath: 'q-colorize-mixin',
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
