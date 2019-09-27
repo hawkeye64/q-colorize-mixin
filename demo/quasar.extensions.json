@@ -1,0 +1,10 @@
+{
+  "qautomate": {
+    "quasarConfFixMode": "automatic",
+    "sort": true
+  },
+  "@quasar/qribbon": {},
+  "@quasar/qmarkdown": {},
+  "@quasar/qpublish": {},
+  "@quasar/colorize": {}
+}
