@@ -1,8 +1,8 @@
 {
   "name": "q-colorize-mixin",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
-  "description": "Quasar color and theme mixins",
+  "description": "Quasar color mixin",
   "license": "MIT",
   "module": "dist/index.esm.js",
   "main": "dist/quasar.common.js",
