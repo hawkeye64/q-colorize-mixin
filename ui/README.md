@@ -12,20 +12,20 @@
 
 ```js
 import Vue from 'vue'
-import Plugin from 'q-colorize-mixin'
+import QColorizeMixin from 'q-colorize-mixin'
 
-Vue.use(Plugin)
+Vue.use(QColorizeMixin)
 ```
 
 or:
 
 ```js
 <script>
-import { Component } from 'q-colorize-mixin'
+import QColorizeMixin from 'q-colorize-mixin'
 
 export default {
   components: {
-    Component
+    QColorizeMixin
   }
 }
 </script>
@@ -87,4 +87,4 @@ $ yarn build
 If you appreciate the work that went into this, please consider [donating to Quasar](https://donate.quasar.dev).
 
 # License
-MIT (c) Jeff Galbraith <jeff.galbraith@xendra.com>
+MIT (c) Jeff Galbraith <jeff@quasar.dev>
