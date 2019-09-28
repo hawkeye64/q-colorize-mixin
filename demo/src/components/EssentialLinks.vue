@@ -15,7 +15,7 @@
       </q-item-section>
       <q-item-section>
         <q-item-label>QColorizeMixin examples</q-item-label>
-        <q-item-label caption>Examples of how to use the QColorizeMixin library</q-item-label>
+        <q-item-label caption>Examples on how to use the QColorizeMixin library</q-item-label>
       </q-item-section>
     </q-item>
     <q-separator />

@@ -13,7 +13,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Colorize - Quasar Demo App
+          QColorizeMixin <span class="text-subtitle2">v{{ version }}</span>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -67,6 +67,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { scroll } from 'quasar'
+import { QColorizeMixin } from 'q-colorize-mixin'
 
 export default {
   name: 'MainLayout',
@@ -75,6 +76,7 @@ export default {
   },
   data () {
     return {
+      version: QColorizeMixin.version,
       leftDrawerOpen: this.$q.platform.is.desktop,
       rightDrawerOpen: this.$q.platform.is.desktop,
       activeToc: 0

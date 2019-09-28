@@ -78,7 +78,7 @@ module.exports = function (ctx) {
       ]
     },
 
-    supportIE: false,
+    supportIE: true,
 
     build: {
       scopeHoisting: true,
@@ -108,7 +108,7 @@ module.exports = function (ctx) {
       watchOptions: {
         ignored: [
           'node_modules',
-          '!node_modules/@quasar/quasar-app-extension-colorize'
+          '!node_modules/q-colorize-mixin'
         ]
       }
     },

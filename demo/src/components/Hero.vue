@@ -4,8 +4,8 @@
       <div class="text-h1 project-name">QColorizeMixin</div>
       <div class="text-h2 project-tagline">Mixin library for Vue Render Functions</div>
       <div class="byline">Created and maintained by Jeff Galbraith</div>
-      <div class="quasar">A Quasar Framework App Extension</div>
-      <q-btn type="a" href="https://github.com/hawkeye64/app-extension-colorize" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
+      <div class="quasar">A Quasar Framework Mix-in</div>
+      <q-btn type="a" href="https://github.com/hawkeye64/q-colorize-mixin" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
       <q-btn to="/docs" class="btn" label="Docs" no-caps flat/>
       <q-btn to="/examples" class="btn" label="Examples" no-caps flat/>
       <q-btn type="a" href="https://donate.quasar.dev" target="_blank" class="btn" label="Donate" no-caps flat/>
