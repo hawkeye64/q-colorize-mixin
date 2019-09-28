@@ -1,5 +1,5 @@
 /*!
- * q-colorize-mixin v1.0.0-alpha.1
+ * q-colorize-mixin v1.0.0-alpha.2
  * (c) 2019 Jeff Galbraith <jeff@quasar.dev>
  * Released under the MIT License.
  */
@@ -16,7 +16,7 @@
   }
   Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
 
-  var version = "1.0.0-alpha.1";
+  var version = "1.0.0-alpha.2";
 
   // 'transparent' at beginning of array as it's not really a color,
   // but needs to be recognized as well
