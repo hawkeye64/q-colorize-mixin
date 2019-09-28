@@ -1,5 +1,5 @@
 /*!
- * q-colorize-mixin v1.0.0-alpha.1
+ * q-colorize-mixin v1.0.0-alpha.2
  * (c) 2019 Jeff Galbraith <jeff@quasar.dev>
  * Released under the MIT License.
  */
@@ -14,6 +14,12 @@
  * vuex v3.1.1
  * (c) 2019 Evan You
  * @license MIT
+ */
+
+/*!
+ * Quasar Framework v1.1.5
+ * (c) 2015-present Razvan Stoenescu
+ * Released under the MIT License.
  */
 
 /*!
