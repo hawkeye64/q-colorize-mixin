@@ -1,14 +1,33 @@
 <template>
-  <div class="q-pa-md row justify-around">
-    <my-component
-      :border-color="borderColor"
-    />
+  <div class="q-pa-md">
+    <div class="q-pb-md q-gutter-md row justify-around">
+      <q-input
+        filled
+        v-model="borderColor"
+      >
+        <template v-slot:append>
+          <q-icon name="colorize" class="cursor-pointer">
+            <q-popup-proxy transition-show="scale" transition-hide="scale">
+              <q-color v-model="borderColor" />
+            </q-popup-proxy>
+          </q-icon>
+        </template>
+      </q-input>
+    </div>
+    <q-separator />
+    <div class="q-pa-md row justify-around">
+      <my-component
+        :border-color="borderColor"
+      >
+        <div class="text-h4">Some Text</div>
+      </my-component>
+    </div>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import QColorizeMixin from 'ui'
+import { QColorizeMixin } from 'ui'
 
 const MyComponent = Vue.extend({
   name: 'my-component',
@@ -16,12 +35,9 @@ const MyComponent = Vue.extend({
   mixins: [QColorizeMixin],
 
   props: {
+    // color prop is added by colorize mix-in
+    // background-color is optional and needs to be added if needed
     borderColor: String
-  },
-
-  data () {
-    return {
-    }
   },
 
   render (h) {
@@ -43,7 +59,7 @@ export default {
 
   data () {
     return {
-      borderColor: 'purple-14'
+      borderColor: '#00FAFA'
     }
   }
 }

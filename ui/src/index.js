@@ -7,4 +7,11 @@ export {
   QColorizeMixin
 }
 
-export default QColorizeMixin
+export default {
+  QColorizeMixin,
+  version,
+
+  install (Vue) {
+    Vue.component(QColorizeMixin.name, QColorizeMixin)
+  }
+}

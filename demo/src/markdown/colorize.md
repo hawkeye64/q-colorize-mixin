@@ -37,11 +37,44 @@ yarn remove q-colorize-mixin
 npm remove q-colorize-mixin
 ```
 
-# Examples
+# Documentation and Examples
 Examples with code can be found [here](https://hawkeye64.github.io/q-colorize-mixin/examples).
 
 # Demo Project (source)
-Source for this application can be found [here](https://github.com/hawkeye64/q-colorize-mixin/tree/master/demo).
+Source for the demo application can be found [here](https://github.com/hawkeye64/q-colorize-mixin/tree/master/demo).
+
+# Setup
+```bash
+$ cd ui
+
+$ yarn
+```
+
+# Developing
+```bash
+# start dev in SPA mode
+$ yarn dev
+```
+
+# Building package
+```bash
+$ yarn build
+```
+
+# Building Demo
+```bash
+# first time prep
+$ cd ui
+$ yarn link
+$ cd ../demo
+$ yarn link "q-colorize-mixin"
+
+# for interactive - browser opens automatically
+$ quasar dev
+
+# for build - goes to docs folder
+$ yarn build-demo
+```
 
 # Code Usage
 
@@ -51,7 +84,7 @@ It is important to note that this mixin is intended to be used with Vue **render
 
 ```js
 import Vue from 'vue'
-import QColorizeMixin from 'q-colorize-mixin'
+import { QColorizeMixin } from 'q-colorize-mixin'
 
 export default Vue.extend({
   name: 'my-component',
@@ -68,7 +101,7 @@ export default Vue.extend({
 
 ```js
 import Vue from 'vue'
-import QColorizeMixin from 'q-colorize-mixin'
+import { QColorizeMixin } from 'q-colorize-mixin'
 
 export default Vue.extend({
   name: 'my-component',
@@ -98,7 +131,7 @@ export default Vue.extend({
 
 ```js
 import Vue from 'vue'
-import QColorizeMixin from 'q-colorize-mixin'
+import { QColorizeMixin } from 'q-colorize-mixin'
 
 export default Vue.extend({
   name: 'my-component',
@@ -129,7 +162,7 @@ export default Vue.extend({
 All of the CSS in this library will autmatically be injected into your app.
 
 ```js
-import QColorizeMixin from 'q-colorize-mixin'
+import { QColorizeMixin } from 'q-colorize-mixin'
 
 export default Vue.extend({
   name: 'my-component',
