@@ -1,18 +1,13 @@
 {
   "name": "q-colorize-mixin",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "description": "Quasar color mixin",
   "license": "MIT",
   "module": "dist/index.esm.js",
-  "main": "dist/quasar.common.js",
+  "main": "dist/index.common.js",
   "scripts": {
     "dev": "cd dev; yarn dev; cd ..",
-    "dev:umd": "yarn build && node build/script.open-umd.js",
-    "dev:ssr": "cd dev; yarn 'dev:ssr'; cd ..",
-    "dev:ios": "cd dev; yarn 'dev:ios'; cd ..",
-    "dev:android": "cd dev; yarn 'dev:android'; cd ..",
-    "dev:electron": "cd dev; yarn 'dev:electron'; cd ..",
     "build": "node build/index.js",
     "build:js": "node build/script.javascript.js",
     "build:css": "node build/script.css.js"
@@ -42,12 +37,11 @@
   },
   "keywords": [
     "quasar",
-    "quasar-framework",
+    "quasarframework",
     "vue",
-    "mix-in",
+    "mixin",
     "color",
-    "background-color",
-    "theme"
+    "background-color"
   ],
   "browserslist": [
     "last 1 version, not dead, ie >= 11"

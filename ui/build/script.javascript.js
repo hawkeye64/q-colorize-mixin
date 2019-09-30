@@ -23,7 +23,7 @@ const builds = [
   {
     rollup: {
       input: {
-        input: resolve(`entry/index.esm.js`)
+        input: resolve(`../src/index.js`)
       },
       output: {
         file: resolve(`../dist/index.esm.js`),
@@ -38,7 +38,7 @@ const builds = [
   {
     rollup: {
       input: {
-        input: resolve(`entry/index.common.js`)
+        input: resolve(`../src/index.js`)
       },
       output: {
         file: resolve(`../dist/index.common.js`),
@@ -48,23 +48,6 @@ const builds = [
     build: {
       // unminified: true,
       minified: true
-    }
-  },
-  {
-    rollup: {
-      input: {
-        input: resolve(`entry/index.umd.js`)
-      },
-      output: {
-        name: 'QColorizeMixin',
-        file: resolve(`../dist/index.umd.js`),
-        format: 'umd'
-      }
-    },
-    build: {
-      unminified: true,
-      minified: true,
-      minExt: true
     }
   }
 ]

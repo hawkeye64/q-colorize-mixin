@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import QColorizeMixin from 'ui' // "ui" is aliased in quasar.conf.js
+import { QColorizeMixin } from 'ui' // "ui" is aliased in quasar.conf.js
 
 export default {
   name: 'MyLayout',

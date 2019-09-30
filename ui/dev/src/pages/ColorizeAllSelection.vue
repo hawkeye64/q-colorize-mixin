@@ -45,7 +45,7 @@
       <my-component
         :color="color"
         :bg-color="bgColor"
-        :borderColor="borderColor"
+        :border-color="borderColor"
         class="text-center"
       >
         <div class="text-h4">Some Text</div>
@@ -56,7 +56,7 @@
 
 <script>
 import Vue from 'vue'
-import QColorizeMixin from 'ui'
+import { QColorizeMixin } from 'ui'
 
 const MyComponent = Vue.extend({
   name: 'my-component',
