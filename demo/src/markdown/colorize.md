@@ -1,7 +1,7 @@
 QColorizeMixin
 ===
 
-QColorizeMixin is a Vue Mix-in library for components created with Quasar Framework. It is only for components that use a `render` function. It does not work with template formats found with SFC (single file components).
+QColorizeMixin is a Vue Mix-in library for components created with Quasar Framework. It is only for components that use a `render` function. If you want to use it with SFC (Single File Component), then check out last example and working with computed style.
 
 # Features
 
@@ -46,8 +46,13 @@ Source for the demo application can be found [here](https://github.com/hawkeye64
 # Setup
 ```bash
 $ cd ui
-
 $ yarn
+
+$ cd dev
+$ yarn
+
+$ cd ..
+
 ```
 
 # Developing
@@ -63,14 +68,14 @@ $ yarn build
 
 # Building Demo
 ```bash
-# first time prep
-$ cd ui
-$ yarn link
-$ cd ../demo
-$ yarn link "q-colorize-mixin"
+# first time prep (from root folder)
+$ cd demo
+$ yarn
 
 # for interactive - browser opens automatically
 $ quasar dev
+
+# or
 
 # for build - goes to docs folder
 $ yarn build-demo
@@ -78,7 +83,7 @@ $ yarn build-demo
 
 # Code Usage
 
-It is important to note that this mixin is intended to be used with Vue **render** functions and not in SFC (single file components). It does not have a render function of its own.
+It is important to note that this mixin is intended to be used with Vue **render** functions and not in SFC (single file components). It does not have a render function of its own. If you want to use it with SFC (Single File Component), then check out last example and working with computed style.
 
 ## As a Mixin
 
@@ -93,11 +98,9 @@ export default Vue.extend({
 ...
 ```
 
-# Simple Examples
+# Colorize Examples
 
-## Colorize
-
-### Use Text and Background Color Definition
+## Text and Background Color Definition
 
 ```js
 import Vue from 'vue'
@@ -114,6 +117,8 @@ export default Vue.extend({
     bgColor: String
   },
 
+  // whatever renders in the slot will be colorized as
+  // long as it inherits the specified color definitions
   render (h) {
     return h('div', this.setBothColors(this.color, this.bgColor, {
       style: {
@@ -127,7 +132,7 @@ export default Vue.extend({
 })
 ```
 
-### Use Border Color Definition
+## Border Color Definition
 
 ```js
 import Vue from 'vue'
@@ -145,6 +150,8 @@ export default Vue.extend({
   },
 
   render (h) {
+    // whatever renders in the slot will be colorized as
+    // long as it inherits the specified color definitions
     return h('div', this.setBorderColor(this.color, this.borderColor, {
       style: {
         width: '200px',
@@ -157,9 +164,9 @@ export default Vue.extend({
 })
 ```
 
-### Use CSS Vars
+## CSS Vars Definition
 
-All of the CSS in this library will autmatically be injected into your app.
+All of the CSS in this library will automatically be injected into your app.
 
 ```js
 import { QColorizeMixin } from 'q-colorize-mixin'
@@ -188,6 +195,8 @@ export default Vue.extend({
   ...
 
   render (h) {
+    // whatever renders in the slot will be colorized as
+    // long as it inherits the specified color definitions
     return h('div', {
       style: this.styles
     }, [

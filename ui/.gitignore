@@ -5,3 +5,5 @@ ui/dev/node_modules
 
 demo/yarn.lock
 demo/node_modules
+
+dist

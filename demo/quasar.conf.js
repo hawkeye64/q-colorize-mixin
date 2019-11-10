@@ -8,17 +8,17 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     boot: [
-      'colorize'
+      'components'
     ],
 
     css: [
-      'app.styl'
+      'app.sass'
     ],
 
     extras: [
       // 'ionicons-v4',
       // 'mdi-v3',
-      // 'fontawesome-v5',
+      'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
@@ -97,6 +97,14 @@ module.exports = function (ctx) {
           options: {
             formatter: require('eslint').CLIEngine.getFormatter('stylish')
           }
+        })
+      },
+
+      chainWebpack (chain) {
+        chain.resolve.alias.merge({
+          'q-colorize-mixin': path.resolve(__dirname, '../ui/src/index.js'),
+          'api': path.resolve(__dirname, '../ui/dist/api/QColorizeMixin.json'),
+          'sass': path.resolve(__dirname, '../ui/src/index.sass')
         })
       }
     },

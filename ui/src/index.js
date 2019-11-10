@@ -1,5 +1,5 @@
 import { version } from '../package.json'
-import QColorizeMixin from './component/Component'
+import QColorizeMixin from './components/QColorizeMixin'
 
 QColorizeMixin.version = version
 

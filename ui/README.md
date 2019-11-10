@@ -1,9 +1,8 @@
-# QColorizeMixin
-
-<img src="https://img.shields.io/npm/v/mixin.svg?label=mixin">
-
 QColorizeMixin
 ===
+
+![](https://img.shields.io/npm/v/q-colorize-mixin.svg?label=q-colorize-mixin)
+[![npm](https://img.shields.io/npm/dt/q-colorize-mixin.svg)](https://www.npmjs.com/package/q-colorize-mixin)
 
 QColorizeMixin is a Vue Mix-in library for components created with Quasar Framework. It is only for components that use a `render` function. It does not work with template formats found with SFC (single file components).
 
@@ -47,12 +46,14 @@ Examples with code can be found [here](https://hawkeye64.github.io/q-colorize-mi
 # Demo Project (source)
 Source for the demo application can be found [here](https://github.com/hawkeye64/q-colorize-mixin/tree/master/demo).
 
-# Setup
+# Building the Projects
+
+## Setup
 ```bash
 $ yarn
 ```
 
-# Developing
+## Developing
 ```bash
 $ cd ui
 
@@ -60,14 +61,14 @@ $ cd ui
 $ yarn dev
 ```
 
-# Building package
+## Building package
 ```bash
 $ cd ui
 
 $ yarn build
 ```
 
-# Building Demo
+## Building Demo
 ```bash
 # first time prep
 $ cd ui

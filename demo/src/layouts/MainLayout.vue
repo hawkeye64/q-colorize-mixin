@@ -16,7 +16,18 @@
           QColorizeMixin <span class="text-subtitle2">v{{ version }}</span>
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div v-if="$q.screen.width > 500">Quasar v{{ $q.version }}</div>
+
+        <q-btn
+          flat
+          dense
+          round
+          @click="rightDrawerOpen = !rightDrawerOpen"
+          aria-label="Table of Contents"
+        >
+          <q-icon name="menu" />
+        </q-btn>
+
       </q-toolbar>
     </q-header>
 

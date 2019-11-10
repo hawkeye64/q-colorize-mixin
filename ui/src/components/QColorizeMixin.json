@@ -1,5 +1,4 @@
 {
-  "type": "mixin",
   "props": {
     "color": {
       "type": "String",
@@ -7,19 +6,23 @@
       "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
       "examples": [
         "color=\"orange-8\"",
-        "color=\"#c8c8c8\""
+        "color=\"#c8c8c8\"",
+        "color=\"crimson\""
       ]
     }
   },
   "methods": {
     "setTextColor": {
       "desc": "Sets the text color of the passed in object. Function determines if passed in `color` is a Quasar color or CSS color",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
           "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-          "__exemption": [ "examples" ]
+          "examples": [
+            "crimson",
+            "red-8",
+            "#cf0FF0"
+          ]
         },
         "data": {
           "type": "Object",
@@ -29,17 +32,21 @@
       },
       "returns": {
         "type": "Object",
-        "desc": "The passed in `data` with modifications"
+        "desc": "The passed in `data` with modifications",
+        "__exemption": [ "examples" ]
       }
     },
     "setBackgroundColor": {
       "desc": "Sets the background color of the passed in object. Function determines if passed in `color` is a Quasar color or CSS color",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
           "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-          "__exemption": [ "examples" ]
+          "examples": [
+            "crimson",
+            "red-8",
+            "#cf0FF0"
+          ]
         },
         "data": {
           "type": "Object",
@@ -49,17 +56,21 @@
       },
       "returns": {
         "type": "Object",
-        "desc": "The passed in `data` with modifications"
+        "desc": "The passed in `data` with modifications",
+        "__exemption": [ "examples" ]
       }
     },
     "setBorderColor": {
       "desc": "Sets the border color of the passed in object. Function determines if passed in `color` is a Quasar color or CSS color",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
           "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-          "__exemption": [ "examples" ]
+          "examples": [
+            "crimson",
+            "red-8",
+            "#cf0FF0"
+          ]
         },
         "data": {
           "type": "Object",
@@ -69,37 +80,45 @@
       },
       "returns": {
         "type": "Object",
-        "desc": "The passed in `data` with modifications"
-      },
-      "setBothColors": {
-        "desc": "Combination of `setTextColor` and `setBackgroundColor`",
-        "__exemption": [ "examples" ],
-        "params": {
-          "color": {
-            "type": "String",
-            "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-            "__exemption": [ "examples" ]
-          },
-          "bgColor": {
-            "type": "String",
-            "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-            "__exemption": [ "examples" ]
-          },
-          "data": {
-            "type": "Object",
-            "desc": "Typically the `{ }` of a render function",
-            "__exemption": [ "examples" ]
-          }
+        "desc": "The passed in `data` with modifications",
+        "__exemption": [ "examples" ]
+      }
+    },
+     "setBothColors": {
+      "desc": "Combination of `setTextColor` and `setBackgroundColor`",
+      "params": {
+        "color": {
+          "type": "String",
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
+          "examples": [
+            "crimson",
+            "red-8",
+            "#cf0FF0"
+          ]
         },
-        "returns": {
+        "bgColor": {
+          "type": "String",
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
+          "examples": [
+            "crimson",
+            "red-8",
+            "#cf0FF0"
+          ]
+        },
+        "data": {
           "type": "Object",
-          "desc": "The passed in `data` with modifications"
+          "desc": "Typically the `{ }` of a render function",
+          "__exemption": [ "examples" ]
         }
+      },
+      "returns": {
+        "type": "Object",
+        "desc": "The passed in `data` with modifications",
+        "__exemption": [ "examples" ]
       }
     },
     "isNamedCssColor": {
       "desc": "Returns true if passed in color is a css named color",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
@@ -117,7 +136,6 @@
     },
     "isCssColor": {
       "desc": "Returns true if passed in color is a named color, hex color or rgb/rgba/hsl/hsla color",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
@@ -138,7 +156,6 @@
     },
     "isCssVar": {
       "desc": "Returns true if passed in color is a CSS variable starting with `--`",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
@@ -156,7 +173,6 @@
     },
     "calculateColor": {
       "desc": "Check if a color is a standard CSS color or a Quasar color (if Quasar, returns the calculated Quasar color)",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
@@ -172,14 +188,12 @@
       },
       "returns": {
         "type": "String",
-        "desc": "The calculated color"
+        "desc": "The calculated color",
+        "__exemption": [ "examples" ]
       }
     },
     "makeQuasarColorVar": {
       "desc": "Generate a CSS variable definition based on the quasar color or existing variable passed in",
-      "examples": [
-        "var(--q-color-red-5, 'default')"
-      ],
       "params": {
         "color": {
           "type": "String",
@@ -195,7 +209,22 @@
       },
       "returns": {
         "type": "String",
-        "desc": "The generated CSS variable definition"
+        "desc": "The generated CSS variable definition",
+        "__exemption": [ "examples" ]
+      }
+    },
+    "isValidCssColor": {
+      "desc": "Tests if the passed in data is a CSS color",
+      "params": {
+        "color": {
+          "type": "String",
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette), CSS color (#, rgb, rgba, hls, etc), or CSS var color",
+          "__exemption": [ "examples" ]
+        }
+      },
+      "returns": {
+        "type": "Boolean",
+        "desc": "Returns true if passed in data is a CSS color"
       }
     }
   }

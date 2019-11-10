@@ -1,3 +1,5 @@
+import 'sass'
+
 import ColorizeColor from '../examples/ColorizeColor'
 import ColorizeBackground from '../examples/ColorizeBackground'
 import ColorizeBorder from '../examples/ColorizeBorder'
