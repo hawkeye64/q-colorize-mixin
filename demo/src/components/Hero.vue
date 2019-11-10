@@ -3,8 +3,9 @@
     <section class="page-header">
       <div class="text-h1 project-name">QColorizeMixin</div>
       <div class="text-h2 project-tagline">Mixin library for Vue Render Functions</div>
-      <div class="byline">Created and maintained by Jeff Galbraith</div>
+      <div class="byline">Created and maintained by Jeff Galbraith <a href="https://twitter.com/jgalbraith64" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></div>
       <div class="quasar">A Quasar Framework Mix-in</div>
+      <div class="donate"><a href="https://github.com/sponsors/hawkeye64" target="_blank" title="Donate"><i class="fas fa-heart" style="color: red"></i></a></div>
       <q-btn type="a" href="https://github.com/hawkeye64/q-colorize-mixin" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
       <q-btn to="/docs" class="btn" label="Docs" no-caps flat/>
       <q-btn to="/examples" class="btn" label="Examples" no-caps flat/>

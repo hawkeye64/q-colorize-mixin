@@ -3,7 +3,7 @@
     <q-markdown :src="markdown" toc @data="onToc" />
     <component-api
       title="QColorizeMixin API"
-      :json="colorizeJson"
+      :json="json"
       type="Vue Mixin"
     />
     <q-markdown>
@@ -22,7 +22,7 @@ This page created with [QMarkdown](https://quasarframework.github.io/app-extensi
 <script>
 import Hero from '../components/Hero'
 import markdown from '../markdown/colorize.md'
-import colorizeJson from 'q-colorize-mixin/src/component/QColorizeMixin.json'
+import api from 'api'
 
 export default {
   name: 'PageIndex',
@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       markdown: markdown,
-      colorizeJson: colorizeJson
+      json: api
     }
   },
 
