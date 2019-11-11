@@ -10,7 +10,8 @@
     "dev": "cd dev; yarn dev; cd ..",
     "build": "node build/index.js",
     "build:js": "node build/script.javascript.js",
-    "build:css": "node build/script.css.js"
+    "build:css": "node build/script.css.js",
+    "build:api": "node build/build.api.js"
   },
   "repository": {
     "type": "git",
