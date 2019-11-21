@@ -116,7 +116,8 @@ module.exports = function (ctx) {
       watchOptions: {
         ignored: [
           'node_modules',
-          '!node_modules/q-colorize-mixin'
+          '!node_modules/q-colorize-mixin',
+          '!node_modules/@quasar/quasar-app-extension-qpublish'
         ]
       }
     },
