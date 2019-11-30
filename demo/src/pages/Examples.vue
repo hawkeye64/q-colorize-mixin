@@ -34,7 +34,7 @@ import Hero from '../components/Hero'
 import ExampleTitle from '../components/ExampleTitle'
 import ExampleCard from '../components/ExampleCard'
 import { slugify } from '../utils/page-utils'
-import getTagParts from '@quasar/quasar-app-extension-qmarkdown/src/lib/getTagParts'
+import { getTagParts } from '@quasar/quasar-app-extension-qmarkdown'
 
 export default {
   name: 'Examples',

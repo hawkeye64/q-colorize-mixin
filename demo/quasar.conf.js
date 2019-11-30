@@ -102,7 +102,7 @@ module.exports = function (ctx) {
 
       chainWebpack (chain) {
         chain.resolve.alias.merge({
-          'q-colorize-mixin': path.resolve(__dirname, '../ui/src/index.js'),
+          'ui': path.resolve(__dirname, '../ui/src/index.js'),
           'api': path.resolve(__dirname, '../ui/dist/api/QColorizeMixin.json'),
           'sass': path.resolve(__dirname, '../ui/src/index.sass')
         })

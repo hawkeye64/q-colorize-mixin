@@ -2,7 +2,7 @@
   <q-list>
     <q-item clickable to="/docs">
       <q-item-section avatar>
-        <q-icon name="bolt" />
+        <q-icon name="extension" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QColorizeMixin docs</q-item-label>
@@ -11,7 +11,7 @@
     </q-item>
     <q-item clickable to="/examples">
       <q-item-section avatar>
-        <q-icon name="bolt" />
+        <q-icon name="extension" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QColorizeMixin examples</q-item-label>
@@ -21,7 +21,7 @@
     <q-separator />
     <q-item clickable tag="a" target="_blank" href="https://github.com/hawkeye64/q-colorize-mixin">
       <q-item-section avatar>
-        <q-icon name="extension" />
+        <q-icon name="home" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QColorizeMixin home</q-item-label>
@@ -30,13 +30,15 @@
     </q-item>
     <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qmarkdown">
       <q-item-section avatar>
-        <q-icon name="extension" />
+        <q-icon name="home" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QMarkdown home</q-item-label>
         <q-item-label caption>@quasar/qmarkdown</q-item-label>
       </q-item-section>
     </q-item>
+    <q-separator />
+    <q-item-label header>Quasar</q-item-label>
     <q-separator />
     <q-item clickable tag="a" target="_blank" href="http://quasar.dev">
       <q-item-section avatar>
