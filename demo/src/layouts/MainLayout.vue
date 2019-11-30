@@ -81,7 +81,9 @@
 <script>
 import { mapGetters } from 'vuex'
 import { scroll } from 'quasar'
-import { QColorizeMixin } from 'q-colorize-mixin'
+// normally, use
+// import { QColorizeMixin } from 'q-colorize-mixin'
+import { QColorizeMixin } from 'ui'
 
 export default {
   name: 'MainLayout',

@@ -8,7 +8,9 @@
 
 <script>
 import Vue from 'vue'
-import { QColorizeMixin } from 'q-colorize-mixin'
+// normally, use
+// import { QColorizeMixin } from 'q-colorize-mixin'
+import { QColorizeMixin } from 'ui'
 
 const MyComponent = Vue.extend({
   name: 'my-component',

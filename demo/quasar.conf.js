@@ -8,7 +8,9 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     boot: [
-      'components'
+      'components',
+      'qribbon',
+      'qmarkdown'
     ],
 
     css: [
@@ -57,6 +59,7 @@ module.exports = function (ctx) {
         'QScrollArea',
         'QSelect',
         'QSeparator',
+        'QSpace',
         'QTab',
         'QTabPanel',
         'QTabPanels',
@@ -103,9 +106,16 @@ module.exports = function (ctx) {
       chainWebpack (chain) {
         chain.resolve.alias.merge({
           'ui': path.resolve(__dirname, '../ui/src/index.js'),
+          // 'q-colorize-mixin': path.resolve(__dirname, '../ui'),
           'api': path.resolve(__dirname, '../ui/dist/api/QColorizeMixin.json'),
           'sass': path.resolve(__dirname, '../ui/src/index.sass')
-        })
+        }),
+
+        chain.module.rule('md')
+        .test(/\.md$/i)
+        .use('raw-loader')
+        .loader('raw-loader')
+
       }
     },
 
