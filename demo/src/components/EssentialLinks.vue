@@ -28,9 +28,9 @@
         <q-item-label caption>q-colorize-mixin</q-item-label>
       </q-item-section>
     </q-item>
-    <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qmarkdown">
+    <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/quasar-ui-qmarkdown">
       <q-item-section avatar>
-        <q-icon name="home" />
+        <q-icon name="fab fa-markdown" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QMarkdown home</q-item-label>

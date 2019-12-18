@@ -98,7 +98,7 @@ export default {
         if (data.style === void 0) data.style = {}
         data.style = {
           ...data.style,
-          'color': `${calcColor}`,
+          color: `${calcColor}`,
           'caret-color': `${calcColor}`
         }
       } else if (color) {
