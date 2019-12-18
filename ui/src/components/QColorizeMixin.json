@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "docsUrl": "https://hawkeye64.github.io/q-colorize-mixin/docs"
+  },
   "props": {
     "color": {
       "type": "String",
