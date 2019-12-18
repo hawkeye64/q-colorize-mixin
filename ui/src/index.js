@@ -4,7 +4,8 @@ import QColorizeMixin from './components/QColorizeMixin'
 QColorizeMixin.version = version
 
 export {
-  QColorizeMixin
+  QColorizeMixin,
+  version
 }
 
 export default {
