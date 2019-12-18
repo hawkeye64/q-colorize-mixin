@@ -26,7 +26,7 @@ This page created with [QMarkdown](https://quasarframework.github.io/quasar-ui-q
 <script>
 import Hero from '../components/Hero'
 import markdown from '../markdown/colorize.md'
-import api from 'api'
+import Api from 'q-colorize-mixin/dist/api/QColorizeMixin.json'
 
 export default {
   name: 'PageIndex',
@@ -38,7 +38,7 @@ export default {
   data () {
     return {
       markdown: markdown,
-      json: api
+      json: Api
     }
   },
 
