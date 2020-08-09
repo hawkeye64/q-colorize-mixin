@@ -29,7 +29,8 @@ const builds = [
       },
       output: {
         file: resolve(`../dist/index.esm.js`),
-        format: 'es'
+        format: 'es',
+        exports: 'named'
       }
     },
     build: {
@@ -44,7 +45,8 @@ const builds = [
       },
       output: {
         file: resolve(`../dist/index.common.js`),
-        format: 'cjs'
+        format: 'cjs',
+        exports: 'named'
       }
     },
     build: {
