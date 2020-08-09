@@ -80,7 +80,8 @@ export default {
           ...data.style,
           'background-color': `${calcColor}`
         }
-      } else if (color) {
+      }
+      else if (color) {
         const colorName = color.toString().trim()
         if (data.class === void 0) data.class = {}
         data.class = {
@@ -101,7 +102,8 @@ export default {
           color: `${calcColor}`,
           'caret-color': `${calcColor}`
         }
-      } else if (color) {
+      }
+      else if (color) {
         const colorName = color.toString().trim()
         if (data.class === void 0) data.class = {}
         data.class = {
@@ -120,7 +122,8 @@ export default {
           ...data.style,
           'border-color': `${calcColor}`
         }
-      } else if (color) {
+      }
+      else if (color) {
         const colorName = color.toString().trim()
         if (data.class === void 0) data.class = {}
         data.class = {
