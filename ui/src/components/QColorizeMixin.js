@@ -128,7 +128,7 @@ export default {
         if (data.class === void 0) data.class = {}
         data.class = {
           ...data.class,
-          ['border-' + colorName]: true
+          ['border-color-' + colorName]: true
         }
       }
       return data
