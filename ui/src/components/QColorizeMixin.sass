@@ -7,5 +7,5 @@ $colors2: ('primary': #027BE3, 'secondary': #26A69A, 'accent': #9C27B0, 'positiv
 
 @each $name, $color in $colors2
   .border-color-#{$name}
-    border-color: $color
+    border-color: var(#{"--q-color-#{$name}"})
 
