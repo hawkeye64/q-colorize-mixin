@@ -1,4 +1,4 @@
-# Quasar App (demo)
+# q-colorize-mixin Demo
 
 A Quasar Framework app
 

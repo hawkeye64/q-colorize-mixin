@@ -2,10 +2,10 @@
   <hero>
     <div class="q-markdown">
       <example-title title="Colorize Basic" />
-      <example-card title="Text" name="ColorizeColor" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeColor.vue').default)" />
-      <example-card title="Background" name="ColorizeBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackground.vue').default)" />
-      <example-card title="Border" name="ColorizeBorder" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBorder.vue').default)" />
-      <example-card title="Text, Background and Border" name="ColorizeBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBoth.vue').default)" />
+      <example-viewer title="Text" file="ColorizeColor" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Background" file="ColorizeBackground" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Border" file="ColorizeBorder" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Text, Background and Border" file="ColorizeBoth" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
       <example-title title="Colorize Advanced" />
       <q-markdown>
@@ -20,10 +20,10 @@ For all examples below that take an input, you can manually enter any valid colo
 | `coral` | CSS named color |
 
       </q-markdown>
-      <example-card title="Text with Input" name="ColorizeColorSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeColorSelection.vue').default)" />
-      <example-card title="Background with Input" name="ColorizeBackgroundSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackgroundSelection.vue').default)" />
-      <example-card title="Border with Input" name="ColorizeBorderSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackgroundSelection.vue').default)" />
-      <example-card title="Text, Background and Border with Input" name="ColorizeBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBothSelection.vue').default)" />
+      <example-viewer title="Text with Input" file="ColorizeColorSelection" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Background with Input" file="ColorizeBackgroundSelection" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Border with Input" file="ColorizeBorderSelection" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Text, Background and Border with Input" file="ColorizeBothSelection" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
     </div>
   </hero>
@@ -32,22 +32,29 @@ For all examples below that take an input, you can manually enter any valid colo
 <script>
 import Hero from '../components/Hero'
 import ExampleTitle from '../components/ExampleTitle'
-import ExampleCard from '../components/ExampleCard'
-import { slugify } from '../utils/page-utils'
-import { getTagParts } from '@quasar/quasar-ui-qmarkdown'
+import { slugify } from 'assets/page-utils'
+import { version } from 'ui'
 
 export default {
   name: 'Examples',
 
   components: {
     Hero,
-    ExampleTitle,
-    ExampleCard
+    ExampleTitle
   },
 
   data () {
     return {
-      tempToc: []
+      tempToc: [],
+      locationUrl: 'https://github.com/hawkeye64/q-colorize-mixin/tree/dev/demo/src/examples/',
+      jsPaths: [
+        `https://cdn.jsdelivr.net/npm/q-colorize-mixin@${version}/dist/index.umd.min.js`
+      ],
+      cssPaths: [
+        `https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qiconpicker@${version}/dist/index.min.css`,
+        'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp',
+        'https://cdn.jsdelivr.net/npm/@quasar/extras/fontawesome-v5/fontawesome-v5.css'
+      ]
     }
   },
 
@@ -81,9 +88,12 @@ export default {
   },
 
   methods: {
-    getTagParts,
     addToToc (name, level = 1) {
-      const slug = slugify(name)
+      let n = name
+      if (level > 1) {
+        n = 'example-' + n
+      }
+      const slug = slugify(n)
       this.tempToc.push({
         children: [],
         id: slug,
@@ -94,12 +104,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.example-page
-  padding: 16px 46px;
-  font-weight: 300;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-</style>

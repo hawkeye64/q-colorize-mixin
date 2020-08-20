@@ -41,7 +41,7 @@ module.exports = function (/* ctx */) {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      'roboto-font',
+      'roboto-font', // optional, you are not bound to it
       'material-icons' // optional, you are not bound to it
     ],
 
@@ -200,7 +200,7 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'q-media-player'
+        appId: 'quasar-app'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
