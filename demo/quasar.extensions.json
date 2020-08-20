@@ -1,4 +1,8 @@
 {
   "json-api-viewer": {},
-  "example-viewer": {}
+  "example-viewer": {},
+  "@quasar/qmarkdown": {
+    "import_md": true,
+    "import_vmd": true
+  }
 }

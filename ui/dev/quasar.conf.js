@@ -66,7 +66,7 @@ module.exports = function (/* ctx */) {
       // https://quasar.dev/quasar-cli/handling-webpack
       chainWebpack (chain) {
         chain.resolve.alias.merge({
-          'ui': path.resolve(__dirname, '../src/index.js')
+          ui: path.resolve(__dirname, '../src/index.js')
         })
       }
     },
