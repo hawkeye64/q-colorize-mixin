@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { copyHeading, slugify } from '../utils/page-utils'
+import { copyHeading, slugify } from 'assets/page-utils'
 
 export default {
   name: 'ExampleTitle',

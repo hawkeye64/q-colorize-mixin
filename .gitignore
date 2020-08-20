@@ -1,8 +1,16 @@
-ui/yarn.lock
-ui/node_modules
-ui/dev/yarn.lock
-ui/dev/node_modules
+.DS_Store
+.thumbs.db
+node_modules
+dist
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-demo/yarn.lock
-demo/node_modules
-ui/dist
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

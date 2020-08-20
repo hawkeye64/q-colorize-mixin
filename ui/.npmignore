@@ -16,10 +16,13 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+.editorconfig
 
 # Linters
 .eslintignore
 .eslintrc.js
+.babelrc
 
 # Other
 /src/components/QColorizeMixin.json
+jsconfig.json
