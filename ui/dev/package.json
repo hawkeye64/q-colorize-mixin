@@ -13,11 +13,11 @@
     "dev:electron": "quasar dev -m electron"
   },
   "dependencies": {
-    "@quasar/extras": "^1.9.4",
+    "@quasar/extras": "^1.9.10",
     "core-js": "^3.6.5"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.6"
+    "@quasar/app": "^2.1.6"
   },
   "browserslist": [
     "last 10 Chrome versions",
