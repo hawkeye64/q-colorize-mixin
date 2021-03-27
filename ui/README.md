@@ -6,6 +6,27 @@ QColorizeMixin
 
 QColorizeMixin is a Vue Mix-in library for components created with Quasar Framework. It is only for components that use a `render` function. It does not work with template formats found with SFC (single file components).
 
+# Release Notes
+
+**v2.0.0 (alpha)** does not have any breaking changes, but it does add new functionality to support Quasar v2 and Vue v3.
+If using Quasar v1, use this mixin as you normally would.
+If using Quasar v2, with Vue 3 composition API, there are exposed the `useColorizeProps` and `useColorize` methods. The later exposes the methods:
+
+```js
+import { useColorizeProps, useColorize } from 'q-colorize-mixin'
+
+// ...
+
+props: {
+  // your other prop definitions
+  ...useColorizeProps()
+},
+
+setup (props) {
+  ...useColorize()
+}
+```
+
 # Features
 
 Allows you to "skin" your component with customized text, background and border colors. You can use:
