@@ -25,10 +25,10 @@ const builds = [
   {
     rollup: {
       input: {
-        input: resolve(`../src/index.js`)
+        input: resolve('../src/index.js')
       },
       output: {
-        file: resolve(`../dist/index.esm.js`),
+        file: resolve('../dist/index.esm.js'),
         format: 'es',
         exports: 'named'
       }
@@ -41,10 +41,10 @@ const builds = [
   {
     rollup: {
       input: {
-        input: resolve(`../src/index.js`)
+        input: resolve('../src/index.js')
       },
       output: {
-        file: resolve(`../dist/index.common.js`),
+        file: resolve('../dist/index.common.js'),
         format: 'cjs',
         exports: 'named'
       }
@@ -137,7 +137,7 @@ function buildEntry (config) {
 }
 
 function injectVueRequirement (code) {
-  const index = code.indexOf(`Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue`)
+  const index = code.indexOf('Vue = Vue && Vue.hasOwnProperty(\'default\') ? Vue[\'default\'] : Vue')
 
   if (index === -1) {
     return code
