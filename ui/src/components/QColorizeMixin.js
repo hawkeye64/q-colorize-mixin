@@ -27,111 +27,140 @@ export const CSS_COLOR_NAMES = [
   'wheat', 'white', 'whitesmoke', 'yellow', 'yellowgreen'
 ]
 
+// Vue 3
+const useColorizeProps = {
+  color: String
+}
+
+// Vue 3
+function useColorize () {
+  function isNamedCssColor (color) {
+    return !!color && CSS_COLOR_NAMES.includes(color.toLowerCase())
+  }
+
+  function isCssColor (color) {
+    return !!color && (!!color.match(/^(#|(rgb|hsl)a?\()/) || isNamedCssColor(color))
+  }
+
+  function isCssVar (color) {
+    return !!color && color.startsWith('--')
+  }
+
+  function calculateColor (color, defaultColor = 'black') {
+    return color === void 0 && defaultColor !== void 0 // safety net
+      ? calculateColor(defaultColor)
+      : isCssColor(color)
+        ? color
+        : makeQuasarColorVar(color, defaultColor)
+  }
+
+  function makeQuasarColorVar (color, defaultColor) {
+    const varStr = isCssVar(color)
+      ? color
+      : `--q-color-${color}`
+
+    // return as a css string, ex: "var(--my-color, 'defaultColor')"
+    return `var(${varStr}, '${defaultColor}')`
+  }
+
+  function isValidCssColor (color) {
+    return isCssColor(color) || isCssVar(color)
+  }
+
+  function setBothColors (color, bgColor, data = {}) {
+    return setTextColor(color, setBackgroundColor(bgColor, data))
+  }
+
+  function setBackgroundColor (color, data = {}) {
+    if (isValidCssColor(color)) {
+      const calcColor = calculateColor(color)
+      if (data.style === void 0) data.style = {}
+      data.style = {
+        ...data.style,
+        'background-color': `${calcColor}`
+      }
+    }
+    else if (color) {
+      const colorName = color.toString().trim()
+      if (data.class === void 0) data.class = {}
+      data.class = {
+        ...data.class,
+        ['bg-' + colorName]: true
+      }
+    }
+
+    return data
+  }
+
+  function setTextColor (color, data = {}) {
+    if (isValidCssColor(color)) {
+      const calcColor = calculateColor(color)
+      if (data.style === void 0) data.style = {}
+      data.style = {
+        ...data.style,
+        color: `${calcColor}`,
+        'caret-color': `${calcColor}`
+      }
+    }
+    else if (color) {
+      const colorName = color.toString().trim()
+      if (data.class === void 0) data.class = {}
+      data.class = {
+        ...data.class,
+        ['text-' + colorName]: true
+      }
+    }
+    return data
+  }
+
+  function setBorderColor (color, data = {}) {
+    if (isValidCssColor(color)) {
+      const calcColor = calculateColor(color)
+      if (data.style === void 0) data.style = {}
+      data.style = {
+        ...data.style,
+        'border-color': `${calcColor}`
+      }
+    }
+    else if (color) {
+      const colorName = color.toString().trim()
+      if (data.class === void 0) data.class = {}
+      data.class = {
+        ...data.class,
+        ['border-color-' + colorName]: true
+      }
+    }
+    return data
+  }
+
+  return {
+    isNamedCssColor,
+    isCssColor,
+    isCssVar,
+    calculateColor,
+    makeQuasarColorVar,
+    isValidCssColor,
+    setBothColors,
+    setBackgroundColor,
+    setTextColor,
+    setBorderColor
+  }
+}
+
+const methods = useColorize()
+
+// Vue 2 compatible
 export default {
   name: 'QColorizeMixin',
 
   props: {
-    color: String
+    ...useColorizeProps
   },
 
-  methods: {
-    isNamedCssColor (color) {
-      return !!color && CSS_COLOR_NAMES.includes(color.toLowerCase())
-    },
+  methods
+}
 
-    isCssColor (color) {
-      return !!color && (!!color.match(/^(#|(rgb|hsl)a?\()/) || this.isNamedCssColor(color))
-    },
-
-    isCssVar (color) {
-      return !!color && color.startsWith('--')
-    },
-
-    calculateColor (color, defaultColor = 'black') {
-      return color === void 0 && defaultColor !== void 0 // safety net
-        ? this.calculateColor(defaultColor)
-        : this.isCssColor(color)
-          ? color
-          : this.makeQuasarColorVar(color, defaultColor)
-    },
-
-    makeQuasarColorVar (color, defaultColor) {
-      const varStr = this.isCssVar(color)
-        ? color
-        : `--q-color-${color}`
-
-      // return as a css string, ex: "var(--my-color, 'defaultColor')"
-      return `var(${varStr}, '${defaultColor}')`
-    },
-
-    isValidCssColor (color) {
-      return this.isCssColor(color) || this.isCssVar(color)
-    },
-
-    setBothColors (color, bgColor, data = {}) {
-      return this.setTextColor(color, this.setBackgroundColor(bgColor, data))
-    },
-
-    setBackgroundColor (color, data = {}) {
-      if (this.isValidCssColor(color)) {
-        const calcColor = this.calculateColor(color)
-        if (data.style === void 0) data.style = {}
-        data.style = {
-          ...data.style,
-          'background-color': `${calcColor}`
-        }
-      }
-      else if (color) {
-        const colorName = color.toString().trim()
-        if (data.class === void 0) data.class = {}
-        data.class = {
-          ...data.class,
-          ['bg-' + colorName]: true
-        }
-      }
-
-      return data
-    },
-
-    setTextColor (color, data = {}) {
-      if (this.isValidCssColor(color)) {
-        const calcColor = this.calculateColor(color)
-        if (data.style === void 0) data.style = {}
-        data.style = {
-          ...data.style,
-          color: `${calcColor}`,
-          'caret-color': `${calcColor}`
-        }
-      }
-      else if (color) {
-        const colorName = color.toString().trim()
-        if (data.class === void 0) data.class = {}
-        data.class = {
-          ...data.class,
-          ['text-' + colorName]: true
-        }
-      }
-      return data
-    },
-
-    setBorderColor (color, data = {}) {
-      if (this.isValidCssColor(color)) {
-        const calcColor = this.calculateColor(color)
-        if (data.style === void 0) data.style = {}
-        data.style = {
-          ...data.style,
-          'border-color': `${calcColor}`
-        }
-      }
-      else if (color) {
-        const colorName = color.toString().trim()
-        if (data.class === void 0) data.class = {}
-        data.class = {
-          ...data.class,
-          ['border-color-' + colorName]: true
-        }
-      }
-      return data
-    }
-  }
+export {
+  useColorizeProps,
+  useColorize
 }
